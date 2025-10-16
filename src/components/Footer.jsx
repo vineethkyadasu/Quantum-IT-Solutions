@@ -24,9 +24,9 @@ const Footer = () => {
             <div className="mb-4">
               <Logo size={40} showText={true} showTagline={true} className="text-white" />
             </div>
-            <p className="text-gray-300 mb-4 leading-relaxed">
+            {/* <p className="text-gray-300 mb-4 leading-relaxed">
               Simplifying IT. Amplifying Success. We help businesses transform their digital infrastructure with cloud, data, and automation expertise.
-            </p>
+            </p> */}
             <div className="flex items-center space-x-2 text-gray-400">
               <MapPinIcon className="w-4 h-4" />
               <span className="text-sm">Casper, Wyoming, USA</span>
