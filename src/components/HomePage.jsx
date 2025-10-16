@@ -148,7 +148,7 @@ const Homepage = () => {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen smooth-scroll">
       {/* Hero Section */}
       <section 
         className="relative min-h-[90vh] flex items-center overflow-hidden"
@@ -156,27 +156,25 @@ const Homepage = () => {
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${backgroundImage})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
         }}
       >
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary-600/30 blur-3xl animate-pulse-slow" />
-          <div className="absolute -bottom-20 -left-20 w-[28rem] h-[28rem] rounded-full bg-indigo-500/20 blur-3xl animate-pulse-slower" />
+          <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-primary-600/30 blur-3xl" />
+          <div className="absolute -bottom-20 -left-20 w-[28rem] h-[28rem] rounded-full bg-indigo-500/20 blur-3xl" />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-blue-500/10 blur-3xl" />
         </div>
         
-        {/* Animated background elements */}
+        {/* Reduced animated elements */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(20)].map((_, i) => (
+          {[...Array(10)].map((_, i) => (
             <div
               key={i}
               className="absolute rounded-full bg-white/5"
               style={{
                 top: `${Math.random() * 100}%`,
                 left: `${Math.random() * 100}%`,
-                width: `${Math.random() * 4 + 1}px`,
-                height: `${Math.random() * 4 + 1}px`,
-                animation: `float ${Math.random() * 10 + 10}s infinite ease-in-out`
+                width: `${Math.random() * 3 + 1}px`,
+                height: `${Math.random() * 3 + 1}px`,
               }}
             />
           ))}
@@ -186,7 +184,7 @@ const Homepage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-7 text-white">
               <span className="inline-flex items-center text-xs md:text-sm px-4 py-2 rounded-full bg-white/10 ring-1 ring-white/15 mb-6 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 mr-2 animate-pulse" /> 
+                <span className="w-2 h-2 rounded-full bg-emerald-400 mr-2" /> 
                 Trusted by 100+ Enterprises Worldwide
               </span>
               
@@ -237,13 +235,7 @@ const Homepage = () => {
 
       {/* Trusted By Section */}
       <section 
-        className="py-12 border-b border-gray-700"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="py-12 border-b border-gray-700 bg-gray-900"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-center text-gray-400 text-sm mb-8">Trusted by industry leaders</p>
@@ -260,13 +252,7 @@ const Homepage = () => {
       {/* Services Section */}
       <section 
         id="services" 
-        className="py-20 relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.95)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="py-20 relative bg-white"
       >
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -283,8 +269,7 @@ const Homepage = () => {
             {services.map((service, index) => (
               <div 
                 key={service.title} 
-                className="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50 overflow-hidden"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50 overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative p-8">
@@ -319,13 +304,7 @@ const Homepage = () => {
 
       {/* Technologies Section */}
       <section 
-        className="py-20 text-white relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="py-20 text-white bg-gray-900"
       >
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -362,13 +341,7 @@ const Homepage = () => {
 
       {/* Stats Section */}
       <section 
-        className="py-20 text-white relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.85), rgba(16, 185, 129, 0.85)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="py-20 text-white relative bg-gradient-to-r from-blue-600 to-green-500"
       >
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -384,13 +357,7 @@ const Homepage = () => {
 
       {/* Case Studies */}
       <section 
-        className="py-20 relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.95)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="py-20 relative bg-gray-50"
       >
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between mb-12">
@@ -410,7 +377,7 @@ const Homepage = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {caseStudies.map((project, index) => (
-              <article key={project.title} className="group bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50 overflow-hidden">
+              <article key={project.title} className="group bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200/50 overflow-hidden">
                 <div className="p-8">
                   <span className="inline-flex items-center text-xs px-3 py-1 rounded-full bg-primary-100 text-primary-700 mb-4">
                     {project.tag}
@@ -447,13 +414,7 @@ const Homepage = () => {
 
       {/* Testimonials */}
       <section 
-        className="py-20 relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(249, 250, 251, 0.92), rgba(249, 250, 251, 0.95)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="py-20 relative bg-white"
       >
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -465,7 +426,7 @@ const Homepage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group p-8 border border-gray-200/50">
+              <div key={index} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group p-8 border border-gray-200/50">
                 <div className="flex items-center mb-6">
                   <div className="text-3xl mr-4">{testimonial.avatar}</div>
                   <div>
@@ -489,13 +450,7 @@ const Homepage = () => {
 
       {/* Industries Section */}
       <section 
-        className="py-20 relative"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.95)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="py-20 relative bg-gray-50"
       >
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -507,7 +462,7 @@ const Homepage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => (
-              <div key={industry.name} className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group text-center p-8 border border-gray-200/50">
+              <div key={industry.name} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 group text-center p-8 border border-gray-200/50">
                 <div className="w-16 h-16 rounded-2xl bg-primary-100 text-primary-600 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-500 group-hover:text-white transition-colors">
                   <industry.icon className="w-8 h-8" />
                 </div>
@@ -524,13 +479,7 @@ const Homepage = () => {
       {/* CTA Section */}
       <section 
         id="contact" 
-        className="relative py-20 md:py-28 overflow-hidden"
-        style={{
-          backgroundImage: `linear-gradient(rgba(59, 130, 246, 0.9), rgba(16, 185, 129, 0.9)), url(${backgroundImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundAttachment: 'fixed'
-        }}
+        className="relative py-20 md:py-28 overflow-hidden bg-gradient-to-r from-blue-600 to-green-500"
       >
         <div className="absolute inset-0">
           <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-white/10 blur-3xl"></div>
@@ -579,7 +528,21 @@ const Homepage = () => {
         </div>
       </section>
 
-    
+      {/* Add smooth scrolling CSS */}
+      <style jsx global>{`
+        html {
+          scroll-behavior: smooth;
+        }
+        .smooth-scroll {
+          transform: translateZ(0);
+          backface-visibility: hidden;
+          perspective: 1000;
+        }
+        section {
+          transform: translateZ(0);
+          will-change: transform;
+        }
+      `}</style>
     </div>
   );
 };
