@@ -130,7 +130,7 @@ const ContactPage = () => {
     <main className="min-h-screen">
       {/* Enhanced Hero Section */}
       <section 
-        className="relative min-h-[50vh] flex items-center overflow-hidden"
+        className="relative min-h-[40vh] sm:min-h-[45vh] md:min-h-[50vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(https://images.unsplash.com/photo-1557804506-669a67965ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80)`,
           backgroundSize: 'cover',
@@ -144,18 +144,18 @@ const ContactPage = () => {
           <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-indigo-500/30 blur-3xl"></div>
         </div>
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <nav className="text-sm text-gray-300 mb-6">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+          <nav className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-6">
             <span className="hover:text-white transition-colors cursor-pointer">Home</span>
             <span className="mx-2">/</span>
             <span className="text-primary-400">Contact</span>
           </nav>
           
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white">
               Let's Start Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400">Project</span>
             </h1>
-            <p className="mt-6 text-xl text-gray-300 leading-relaxed">
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed">
               Tell us about your goals. We'll respond within 1 business day to discuss how we can help transform your business.
             </p>
           </div>
@@ -163,28 +163,28 @@ const ContactPage = () => {
       </section>
 
       {/* Contact Methods */}
-      <section className="py-16 bg-white">
+      <section className="py-12 sm:py-14 md:py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {contactMethods.map((method, index) => (
               <div 
                 key={method.title}
-                className="group text-center p-8 bg-gray-50 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+                className="group text-center p-6 sm:p-8 bg-gray-50 rounded-xl sm:rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-primary-50 to-cyan-50 ${method.color} flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform`}>
-                  <method.icon className="w-8 h-8" />
+                <div className={`w-14 h-14 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br from-primary-50 to-cyan-50 ${method.color} flex items-center justify-center mx-auto mb-4 sm:mb-6 group-hover:scale-110 transition-transform`}>
+                  <method.icon className="w-7 h-7 sm:w-8 sm:h-8" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{method.title}</h3>
-                <p className="text-gray-600 text-sm mb-3">{method.description}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">{method.title}</h3>
+                <p className="text-gray-600 text-xs sm:text-sm mb-2 sm:mb-3">{method.description}</p>
                 {method.link ? (
                   <a 
                     href={method.link} 
-                    className="text-primary-600 hover:text-primary-700 font-semibold text-lg transition-colors"
+                    className="text-primary-600 hover:text-primary-700 font-semibold text-base sm:text-lg transition-colors break-all"
                   >
                     {method.details}
                   </a>
                 ) : (
-                  <div className="text-gray-900 font-semibold text-lg">{method.details}</div>
+                  <div className="text-gray-900 font-semibold text-base sm:text-lg">{method.details}</div>
                 )}
               </div>
             ))}
