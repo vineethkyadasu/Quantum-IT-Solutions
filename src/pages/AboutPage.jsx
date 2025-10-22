@@ -98,7 +98,7 @@ const AboutPage = () => {
     <main className="min-h-screen">
       {/* Enhanced Hero Section */}
       <section 
-        className="relative min-h-[60vh] flex items-center overflow-hidden"
+        className="relative min-h-[50vh] sm:min-h-[55vh] md:min-h-[60vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${backgroundImages.hero})`,
           backgroundSize: 'cover',
@@ -112,46 +112,46 @@ const AboutPage = () => {
           <div className="absolute -bottom-20 -left-20 w-64 h-64 rounded-full bg-indigo-500/30 blur-3xl"></div>
         </div>
         
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <nav className="text-sm text-gray-300 mb-6">
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+          <nav className="text-xs sm:text-sm text-gray-300 mb-4 sm:mb-6">
             {/* <span className="hover:text-white transition-colors cursor-pointer">Home</span> */}
             {/* <span className="mx-2">/</span> */}
             {/* <span className="text-primary-400">About</span> */}
           </nav>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
             <div className="text-white">
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
                 About <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400">Quantum IT</span>
               </h1>
-              <p className="mt-6 text-xl text-gray-300 leading-relaxed max-w-2xl">
+              <p className="mt-4 sm:mt-6 text-base sm:text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl">
                 Simplifying IT. Amplifying Success. We help organizations modernize with cloud, data, analytics, and automation — securely and at scale.
               </p>
               
-              <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-6">
+              <div className="mt-6 sm:mt-8 grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
                 {stats.map((stat, index) => (
                   <div key={index} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-white">{stat.number}</div>
-                    <div className="text-xs md:text-sm text-gray-400 mt-1">{stat.label}</div>
+                    <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white">{stat.number}</div>
+                    <div className="text-[10px] sm:text-xs md:text-sm text-gray-400 mt-1">{stat.label}</div>
                   </div>
                 ))}
               </div>
             </div>
             
-            <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-3xl blur-xl opacity-30"></div>
-              <div className="relative bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20 p-8">
-                <div className="grid grid-cols-2 gap-4">
+            <div className="relative mt-8 lg:mt-0">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-2xl sm:rounded-3xl blur-xl opacity-30"></div>
+              <div className="relative bg-white/10 backdrop-blur-lg rounded-xl sm:rounded-2xl border border-white/20 p-4 sm:p-6 md:p-8">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {highlights.map((item, index) => (
                     <div 
                       key={item.label} 
-                      className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 group"
+                      className="bg-white/10 backdrop-blur-sm rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 border border-white/10 hover:bg-white/20 transition-all duration-300 group"
                     >
-                      <div className={`w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform ${item.color}`}>
-                        <item.icon className="w-6 h-6" />
+                      <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-lg sm:rounded-xl bg-white/10 flex items-center justify-center mb-2 sm:mb-3 group-hover:scale-110 transition-transform ${item.color}`}>
+                        <item.icon className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
-                      <div className="text-xs uppercase tracking-wide text-gray-300">{item.label}</div>
-                      <div className="mt-1 font-semibold text-white text-sm">{item.value}</div>
+                      <div className="text-[10px] sm:text-xs uppercase tracking-wide text-gray-300">{item.label}</div>
+                      <div className="mt-1 font-semibold text-white text-xs sm:text-sm leading-tight">{item.value}</div>
                     </div>
                   ))}
                 </div>
@@ -162,31 +162,31 @@ const AboutPage = () => {
       </section>
 
       {/* Mission & Story Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-16 md:py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 sm:gap-12 lg:gap-16 items-center">
+            <div className="relative group order-2 lg:order-1">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary-500 to-cyan-500 rounded-2xl sm:rounded-3xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
                   alt="Quantum IT Team" 
-                  className="w-full h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-64 sm:h-80 md:h-96 object-cover transform group-hover:scale-105 transition-transform duration-500"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-6 left-6 text-white">
-                  <h3 className="text-xl font-bold">Our Expert Team</h3>
-                  <p className="text-gray-200">10+ years of combined experience</p>
+                <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 text-white">
+                  <h3 className="text-lg sm:text-xl font-bold">Our Expert Team</h3>
+                  <p className="text-sm sm:text-base text-gray-200">10+ years of combined experience</p>
                 </div>
               </div>
             </div>
             
-            <div className="space-y-8">
+            <div className="space-y-6 sm:space-y-8 order-1 lg:order-2">
               <div>
-                <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-6">
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 mb-4 sm:mb-6">
                   Our <span className="text-primary-600">Mission</span> & Story
                 </h2>
-                <p className="text-gray-700 leading-8 text-lg">
+                <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
                   Quantum IT Solutions LLC is a dynamic and forward-thinking technology consulting and services company based in Casper, Wyoming, USA. Founded with a vision to simplify complex IT challenges and empower digital transformation.
                 </p>
               </div>
