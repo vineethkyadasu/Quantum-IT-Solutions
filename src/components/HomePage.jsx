@@ -277,9 +277,9 @@ const Homepage = () => {
             {services.map((service, index) => (
               <div 
                 key={service.title} 
-                className="group bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50 overflow-hidden"
+                className="group bg-white rounded-xl sm:rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 border border-gray-200/50 overflow-hidden relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-br from-primary-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                 <div className="relative p-6 sm:p-8">
                   <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-primary-500 text-white flex items-center justify-center mb-4 sm:mb-6 group-hover:scale-110 transition-transform duration-300">
                     <service.icon className="w-6 h-6 sm:w-7 sm:h-7" />
