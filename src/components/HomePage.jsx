@@ -298,7 +298,11 @@ const Homepage = () => {
                   </ul>
                   
                   <div className="mt-4 sm:mt-6 pt-4 sm:pt-6 border-t border-gray-200">
-                    <Link to="/contact" className="inline-flex items-center text-primary-600 font-semibold text-xs sm:text-sm group-hover:text-primary-700">
+                    <Link 
+                      to="/contact" 
+                      className="inline-flex items-center text-primary-600 font-semibold text-xs sm:text-sm group-hover:text-primary-700"
+                      onClick={(e) => e.stopPropagation()}
+                    >
                       Learn more
                       <ArrowRightIcon className="ml-2 w-3 h-3 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>

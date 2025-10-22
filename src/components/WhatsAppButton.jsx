@@ -22,16 +22,17 @@ const WhatsAppButton = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999]">
+    <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-[9999] pointer-events-none">
       {/* Floating WhatsApp Button - Direct to WhatsApp */}
       <button
-        onClick={() => {
+        onClick={(e) => {
+          e.stopPropagation();
           const finalMessage = defaultMessage;
           const encodedMessage = encodeURIComponent(finalMessage);
           const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
           window.open(whatsappUrl, '_blank');
         }}
-        className="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white rounded-full p-3.5 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 active:scale-95 touch-manipulation group"
+        className="bg-green-500 hover:bg-green-600 active:bg-green-700 text-white rounded-full p-3.5 sm:p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 active:scale-95 touch-manipulation group pointer-events-auto"
         aria-label="Contact us on WhatsApp"
         title="Contact us on WhatsApp"
       >
