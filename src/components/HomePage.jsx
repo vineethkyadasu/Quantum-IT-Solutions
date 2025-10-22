@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   ArrowRightIcon, 
   CloudIcon, 
@@ -207,15 +208,15 @@ const Homepage = () => {
               
               {/* CTA Buttons with Enhanced Styling */}
               <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
-                <a href="/services" className="group relative bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-base md:text-lg font-semibold px-8 py-3 md:px-10 md:py-4 rounded-xl inline-flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg transform overflow-hidden">
+                <Link to="/services" className="group relative bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-base md:text-lg font-semibold px-8 py-3 md:px-10 md:py-4 rounded-xl inline-flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg transform overflow-hidden">
                   <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                   <span className="relative">Start Your Journey</span>
                   <ArrowRightIcon className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300 relative" />
-                </a>
-                <a href="/contact" className="group relative border-2 border-white/40 hover:border-white/60 bg-white/5 hover:bg-white/10 backdrop-blur-md text-white text-base md:text-lg font-semibold px-8 py-3 md:px-10 md:py-4 rounded-xl inline-flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-lg">
+                </Link>
+                <Link to="/contact" className="group relative border-2 border-white/40 hover:border-white/60 bg-white/5 hover:bg-white/10 backdrop-blur-md text-white text-base md:text-lg font-semibold px-8 py-3 md:px-10 md:py-4 rounded-xl inline-flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-lg">
                   <RocketLaunchIcon className="mr-3 h-5 w-5 group-hover:-translate-y-1 transition-transform duration-300" />
                   <span>Explore Solutions</span>
-                </a>
+                </Link>
               </div>
 
               {/* Enhanced Stats Grid */}
@@ -297,10 +298,10 @@ const Homepage = () => {
                   </ul>
                   
                   <div className="mt-6 pt-6 border-t border-gray-200">
-                    <a href="/contact" className="inline-flex items-center text-primary-600 font-semibold text-sm group-hover:text-primary-700">
+                    <Link to="/contact" className="inline-flex items-center text-primary-600 font-semibold text-sm group-hover:text-primary-700">
                       Learn more
                       <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -377,9 +378,9 @@ const Homepage = () => {
                 See how we've helped businesses achieve remarkable results through technology innovation.
               </p>
             </div>
-            <a href="/services" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg mt-6 lg:mt-0 transition-colors">
+            <Link to="/services" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg mt-6 lg:mt-0 transition-colors">
               Start your project
-            </a>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -509,9 +510,9 @@ const Homepage = () => {
           </p>
           
           <div className="flex flex-col sm:flex-row justify-center gap-5 mb-12">
-            <a href="/contact" className="bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-lg font-semibold transition-colors shadow-lg">
+            <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-lg font-semibold transition-colors shadow-lg">
               Get Free Proposal
-            </a>
+            </Link>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto text-sm">

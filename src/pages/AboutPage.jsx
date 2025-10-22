@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { 
   CheckBadgeIcon, 
   ShieldCheckIcon, 
@@ -346,12 +347,12 @@ const AboutPage = () => {
             Let's discuss how Quantum IT Solutions can help you achieve your digital transformation goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+            <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
               Get Started
-            </a>
-            <a href="/services" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            </Link>
+            <Link to="/services" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
-            </a>
+            </Link>
           </div>
         </div>
       </section>

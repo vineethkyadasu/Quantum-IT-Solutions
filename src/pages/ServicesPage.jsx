@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { 
   CloudIcon, 
   CircleStackIcon, 
@@ -151,12 +152,12 @@ const ServicesPage = () => {
           </p>
           
           <div className="mt-8 flex justify-center gap-4">
-            <a href="/contact" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
+            <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
               Get Started
-            </a>
-            <a href="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            </Link>
+            <Link to="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Schedule Consultation
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -245,10 +246,10 @@ const ServicesPage = () => {
                     <p className="text-sm text-gray-700">{service.caseStudy}</p>
                   </div>
 
-                  <a href="/contact" className="w-full bg-gray-100 hover:bg-primary-500 hover:text-white text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 group-hover:shadow-lg flex items-center justify-center">
+                  <Link to="/contact" className="w-full bg-gray-100 hover:bg-primary-500 hover:text-white text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 group-hover:shadow-lg flex items-center justify-center">
                     Learn More
                     <ArrowRightIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}
@@ -328,12 +329,12 @@ const ServicesPage = () => {
               Let's discuss how our services can help you achieve your digital transformation goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
                 Start Your Project
-              </a>
-              <a href="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              </Link>
+              <Link to="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
                 Schedule Consultation
-              </a>
+              </Link>
             </div>
           </div>
         </div>
