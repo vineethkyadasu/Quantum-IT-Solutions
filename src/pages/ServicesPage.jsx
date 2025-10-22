@@ -152,10 +152,18 @@ const ServicesPage = () => {
           </p>
           
           <div className="mt-6 sm:mt-8 flex flex-col sm:flex-row justify-center gap-3 sm:gap-4 px-4">
-            <Link to="/contact" className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg touch-manipulation">
+            <Link 
+              to="/contact" 
+              className="bg-primary-500 hover:bg-primary-600 text-white px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg touch-manipulation"
+              onClick={(e) => e.stopPropagation()}
+            >
               Get Started
             </Link>
-            <Link to="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold transition-colors touch-manipulation">
+            <Link 
+              to="/contact" 
+              className="border-2 border-white text-white hover:bg-white hover:text-primary-600 px-6 py-3 sm:px-8 sm:py-3 rounded-lg font-semibold transition-colors touch-manipulation"
+              onClick={(e) => e.stopPropagation()}
+            >
               Schedule Consultation
             </Link>
           </div>
@@ -246,7 +254,11 @@ const ServicesPage = () => {
                     <p className="text-sm text-gray-700">{service.caseStudy}</p>
                   </div>
 
-                  <Link to="/contact" className="w-full bg-gray-100 hover:bg-primary-500 hover:text-white text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 group-hover:shadow-lg flex items-center justify-center">
+                  <Link 
+                    to="/contact" 
+                    className="w-full bg-gray-100 hover:bg-primary-500 hover:text-white text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 group-hover:shadow-lg flex items-center justify-center"
+                    onClick={(e) => e.stopPropagation()}
+                  >
                     Learn More
                     <ArrowRightIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
@@ -329,10 +341,18 @@ const ServicesPage = () => {
               Let's discuss how our services can help you achieve your digital transformation goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link to="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              <Link 
+                to="/contact" 
+                className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg"
+                onClick={(e) => e.stopPropagation()}
+              >
                 Start Your Project
               </Link>
-              <Link to="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              <Link 
+                to="/contact" 
+                className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                onClick={(e) => e.stopPropagation()}
+              >
                 Schedule Consultation
               </Link>
             </div>

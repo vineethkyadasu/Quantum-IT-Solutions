@@ -389,11 +389,16 @@ const ContactPage = () => {
                         ></textarea>
                       </div>
 
-                      <button 
-                        type="submit"
-                        disabled={isSubmitting}
-                        className="w-full bg-primary-500 hover:bg-primary-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center"
-                      >
+              <button 
+                type="submit"
+                disabled={isSubmitting}
+                onClick={(e) => {
+                  if (!isSubmitting) {
+                    e.stopPropagation();
+                  }
+                }}
+                className="w-full bg-primary-500 hover:bg-primary-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center"
+              >
                         {isSubmitting ? (
                           <>
                             <svg className="animate-spin h-5 w-5 mr-3" viewBox="0 0 24 24">
