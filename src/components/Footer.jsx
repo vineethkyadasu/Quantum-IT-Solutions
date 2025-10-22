@@ -17,13 +17,18 @@ const Footer = () => {
       <div className="h-1 accent-gradient-top" />
       
       {/* Main Footer Content */}
-      <div className="container-custom py-16">
+      <div className="container-custom py-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="mb-4">
-              <Logo size={40} showText={true} showTagline={true} className="text-white" />
+              <img 
+                src="/FOOTERLOGO.jpg" 
+                alt="Quantum IT Solutions - Simplifying IT. Amplifying Success." 
+                className="h-16 w-auto object-contain"
+              />
             </div>
+
             {/* <p className="text-gray-300 mb-4 leading-relaxed">
               Simplifying IT. Amplifying Success. We help businesses transform their digital infrastructure with cloud, data, and automation expertise.
             </p> */}
@@ -77,7 +82,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <PhoneIcon className="w-4 h-4 text-primary-400" />
-                <span className="text-gray-300">+1 (307) 555-0123</span>
+                <span className="text-gray-300">+1 (307) 247-0821</span>
               </div>
               <div className="flex items-center space-x-3">
                 <ClockIcon className="w-4 h-4 text-primary-400" />
@@ -105,7 +110,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-800">
-        <div className="container-custom py-6">
+        <div className="container-custom py-4">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
               © {currentYear} Quantum IT Solutions LLC. All rights reserved.

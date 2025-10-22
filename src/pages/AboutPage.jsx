@@ -346,12 +346,12 @@ const AboutPage = () => {
             Let's discuss how Quantum IT Solutions can help you achieve your digital transformation goals.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
+            <a href="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors shadow-lg">
               Get Started
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            </a>
+            <a href="/services" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Learn More
-            </button>
+            </a>
           </div>
         </div>
       </section>

@@ -5,7 +5,7 @@ const Logo = ({ className = '', size = 100, showText = true, showTagline = false
   
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <img src="/logo.png" alt="Quantum IT Solutions" style={{ width: 300, height: 150 }} />
+      <img src="/logo.png" alt="Quantum IT Solutions" style={{ width: 400, height: 200 }} />
       {showText && (
         <div className="flex flex-col">
 {/*         

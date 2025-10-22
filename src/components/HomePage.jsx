@@ -21,11 +21,17 @@ import {
 } from '@heroicons/react/24/outline';
 
 const Homepage = () => {
-  // Unified background image
-  const backgroundImage = 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=1200&h=800&fit=crop&auto=format';
+  // Unified background image - IT/Technology themed
+  const backgroundImage = 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1920&h=1080&fit=crop&auto=format';
   const quantumLogo = '/logo.png';
 
   const services = [
+    { 
+      title: 'AI & Analytics', 
+      description: 'Turn data into insights using ML models, real-time analytics, and interactive dashboards for data-driven decisions.', 
+      icon: CpuChipIcon,
+      features: ['Machine Learning', 'Predictive analytics', 'BI dashboards']
+    },
     { 
       title: 'Cloud Strategy & Migration', 
       description: 'Design secure, scalable, and cost-efficient cloud architectures across AWS, Azure, and GCP with proven migration frameworks.', 
@@ -37,12 +43,6 @@ const Homepage = () => {
       description: 'Build high-performance data platforms with Snowflake, Databricks, and modern pipelines for real-time analytics.', 
       icon: CircleStackIcon,
       features: ['Real-time pipelines', 'Data warehousing', 'ETL/ELT processes']
-    },
-    { 
-      title: 'AI & Analytics', 
-      description: 'Turn data into insights using ML models, real-time analytics, and interactive dashboards for data-driven decisions.', 
-      icon: CpuChipIcon,
-      features: ['Machine Learning', 'Predictive analytics', 'BI dashboards']
     },
     { 
       title: 'DevOps Automation', 
@@ -151,7 +151,7 @@ const Homepage = () => {
     <div className="min-h-screen smooth-scroll">
       {/* Hero Section */}
       <section 
-        className="relative min-h-[90vh] flex items-center overflow-hidden"
+        className="relative min-h-[60vh] flex items-center overflow-hidden"
         style={{
           backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${backgroundImage})`,
           backgroundSize: 'cover',
@@ -180,53 +180,60 @@ const Homepage = () => {
           ))}
         </div>
 
-        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-7 text-white">
-              <span className="inline-flex items-center text-xs md:text-sm px-4 py-2 rounded-full bg-white/10 ring-1 ring-white/15 mb-6 backdrop-blur-sm">
-                <span className="w-2 h-2 rounded-full bg-emerald-400 mr-2" /> 
-                Trusted by 100+ Enterprises Worldwide
-              </span>
+        <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+          <div className="flex items-center justify-center">
+            <div className="text-white text-center max-w-6xl">
+              {/* Trust Badge with Animation */}
+              <div className="inline-flex items-center text-xs md:text-sm px-5 py-2.5 rounded-full bg-gradient-to-r from-white/10 to-white/5 ring-1 ring-white/20 mb-8 backdrop-blur-md hover:ring-white/30 transition-all duration-300 animate-pulse">
+                <span className="relative flex h-3 w-3 mr-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                </span>
+                <span className="font-medium">Trusted by 100+ Enterprises Worldwide</span>
+              </div>
               
-              <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
-                Digital Transformation
-                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-cyan-400 mt-2">
+              {/* Main Heading with Stagger Animation */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4">
+                <span className="inline-block animate-fade-in-up">Digital Transformation</span>
+                <span className="block text-transparent bg-clip-text bg-gradient-to-r from-primary-400 via-cyan-400 to-blue-400 mt-3 animate-fade-in-up animation-delay-200">
                   Made Simple
                 </span>
               </h1>
               
-              <p className="mt-6 text-xl md:text-2xl text-gray-300 max-w-2xl leading-relaxed">
-                We deliver <span className="text-primary-400 font-semibold">cutting-edge solutions</span> in cloud, data, and AI that drive measurable business outcomes and accelerate growth.
+              {/* Enhanced Description */}
+              <p className="mt-4 text-base sm:text-lg md:text-xl text-gray-200 max-w-3xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
+                We deliver <span className="text-primary-400 font-bold">cutting-edge solutions</span> in cloud, data, and AI that drive measurable business outcomes and accelerate growth.
               </p>
               
-              <div className="mt-10 flex flex-col sm:flex-row gap-5">
-                <a href="#contact" className="group bg-primary-500 hover:bg-primary-600 text-white text-lg px-8 py-4 rounded-lg inline-flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-lg">
-                  Start Your Journey
-                  <ArrowRightIcon className="ml-3 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              {/* CTA Buttons with Enhanced Styling */}
+              <div className="mt-6 flex flex-col sm:flex-row gap-4 justify-center animate-fade-in-up animation-delay-600">
+                <a href="/services" className="group relative bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white text-base md:text-lg font-semibold px-8 py-3 md:px-10 md:py-4 rounded-xl inline-flex items-center justify-center transition-all duration-300 hover:scale-105 hover:shadow-2xl shadow-lg transform overflow-hidden">
+                  <span className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                  <span className="relative">Start Your Journey</span>
+                  <ArrowRightIcon className="ml-3 h-5 w-5 group-hover:translate-x-2 transition-transform duration-300 relative" />
                 </a>
-                <a href="#services" className="border border-white/30 hover:border-white/50 text-white text-lg px-8 py-4 rounded-lg inline-flex items-center justify-center backdrop-blur-sm transition-all duration-300">
-                  <RocketLaunchIcon className="mr-3 h-5 w-5" />
-                  Explore Solutions
+                <a href="/contact" className="group relative border-2 border-white/40 hover:border-white/60 bg-white/5 hover:bg-white/10 backdrop-blur-md text-white text-base md:text-lg font-semibold px-8 py-3 md:px-10 md:py-4 rounded-xl inline-flex items-center justify-center transition-all duration-300 hover:scale-105 shadow-lg">
+                  <RocketLaunchIcon className="mr-3 h-5 w-5 group-hover:-translate-y-1 transition-transform duration-300" />
+                  <span>Explore Solutions</span>
                 </a>
               </div>
 
-              {/* Stats preview */}
-              <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-6">
+              {/* Enhanced Stats Grid */}
+              <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 max-w-5xl mx-auto animate-fade-in-up animation-delay-800">
                 {stats.slice(0, 4).map((stat, index) => (
-                  <div key={index} className="text-center">
-                    <div className="text-2xl md:text-3xl font-bold text-white">{stat.number}</div>
-                    <div className="text-xs md:text-sm text-gray-400 mt-1">{stat.label}</div>
+                  <div 
+                    key={index} 
+                    className="group relative text-center p-4 rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all duration-300 hover:scale-105 hover:shadow-xl"
+                  >
+                    <div className="text-2xl md:text-3xl lg:text-4xl font-extrabold text-white mb-1 group-hover:text-primary-400 transition-colors duration-300">
+                      {stat.number}
+                    </div>
+                    <div className="text-xs md:text-sm text-gray-300 font-medium uppercase tracking-wider">
+                      {stat.label}
+                    </div>
+                    <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary-500/20 to-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
                   </div>
                 ))}
-              </div>
-            </div>
-            
-            <div className="lg:col-span-5">
-              <div className="relative">
-                <div className="absolute -inset-4 bg-primary-500/20 rounded-3xl blur-2xl" />
-                <div className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur p-6">
-                  <img src={quantumLogo} alt="Quantum IT Solutions Logo" className="w-full h-auto rounded-2xl object-contain bg-white p-6" />
-                </div>
               </div>
             </div>
           </div>
@@ -290,7 +297,7 @@ const Homepage = () => {
                   </ul>
                   
                   <div className="mt-6 pt-6 border-t border-gray-200">
-                    <a href="#" className="inline-flex items-center text-primary-600 font-semibold text-sm group-hover:text-primary-700">
+                    <a href="/contact" className="inline-flex items-center text-primary-600 font-semibold text-sm group-hover:text-primary-700">
                       Learn more
                       <ArrowRightIcon className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </a>
@@ -370,7 +377,7 @@ const Homepage = () => {
                 See how we've helped businesses achieve remarkable results through technology innovation.
               </p>
             </div>
-            <a href="#contact" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg mt-6 lg:mt-0 transition-colors">
+            <a href="/services" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg mt-6 lg:mt-0 transition-colors">
               Start your project
             </a>
           </div>
@@ -505,10 +512,6 @@ const Homepage = () => {
             <a href="/contact" className="bg-white text-primary-600 hover:bg-gray-100 text-lg px-8 py-4 rounded-lg font-semibold transition-colors shadow-lg">
               Get Free Proposal
             </a>
-            <a href="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 text-lg px-8 py-4 rounded-lg font-semibold transition-colors">
-              <PhoneIcon className="w-5 h-5 mr-2 inline" />
-              Schedule Call
-            </a>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-2xl mx-auto text-sm">
@@ -541,6 +544,39 @@ const Homepage = () => {
         section {
           transform: translateZ(0);
           will-change: transform;
+        }
+        
+        /* Custom Fade In Up Animation */
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(30px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in-up {
+          animation: fade-in-up 0.8s ease-out forwards;
+          opacity: 0;
+        }
+        
+        .animation-delay-200 {
+          animation-delay: 0.2s;
+        }
+        
+        .animation-delay-400 {
+          animation-delay: 0.4s;
+        }
+        
+        .animation-delay-600 {
+          animation-delay: 0.6s;
+        }
+        
+        .animation-delay-800 {
+          animation-delay: 0.8s;
         }
       `}</style>
     </div>

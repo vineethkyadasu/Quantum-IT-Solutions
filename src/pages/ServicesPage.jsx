@@ -17,6 +17,15 @@ import {
 
 const services = [
   {
+    title: 'AI & Analytics',
+    description: 'Turn data into insights using ML models, real-time analytics, and interactive dashboards for data-driven decisions.',
+    icon: CpuChipIcon,
+    features: ['Machine Learning', 'Predictive analytics', 'BI dashboards'],
+    gradient: 'from-purple-500 to-pink-500',
+    industries: ['Healthcare', 'Finance', 'Marketing'],
+    caseStudy: 'Increased prediction accuracy by 35% with custom ML models'
+  },
+  {
     title: 'Cloud Strategy & Migration',
     description: 'Design secure, scalable, and cost-efficient cloud architectures across AWS, Azure, and GCP with proven migration frameworks.',
     icon: CloudIcon,
@@ -33,15 +42,6 @@ const services = [
     gradient: 'from-green-500 to-emerald-500',
     industries: ['E-commerce', 'Telecom', 'Manufacturing'],
     caseStudy: 'Built data platform processing 10M+ events daily'
-  },
-  {
-    title: 'AI & Analytics',
-    description: 'Turn data into insights using ML models, real-time analytics, and interactive dashboards for data-driven decisions.',
-    icon: CpuChipIcon,
-    features: ['Machine Learning', 'Predictive analytics', 'BI dashboards'],
-    gradient: 'from-purple-500 to-pink-500',
-    industries: ['Healthcare', 'Finance', 'Marketing'],
-    caseStudy: 'Increased prediction accuracy by 35% with custom ML models'
   },
   {
     title: 'DevOps Automation',
@@ -151,12 +151,12 @@ const ServicesPage = () => {
           </p>
           
           <div className="mt-8 flex justify-center gap-4">
-            <button className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
+            <a href="/contact" className="bg-primary-500 hover:bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg">
               Get Started
-            </button>
-            <button className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
+            </a>
+            <a href="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 rounded-lg font-semibold transition-colors">
               Schedule Consultation
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -245,10 +245,10 @@ const ServicesPage = () => {
                     <p className="text-sm text-gray-700">{service.caseStudy}</p>
                   </div>
 
-                  <button className="w-full bg-gray-100 hover:bg-primary-500 hover:text-white text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 group-hover:shadow-lg flex items-center justify-center">
+                  <a href="/contact" className="w-full bg-gray-100 hover:bg-primary-500 hover:text-white text-gray-700 py-3 rounded-lg font-semibold transition-all duration-300 group-hover:shadow-lg flex items-center justify-center">
                     Learn More
                     <ArrowRightIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </button>
+                  </a>
                 </div>
               </div>
             ))}
@@ -328,12 +328,12 @@ const ServicesPage = () => {
               Let's discuss how our services can help you achieve your digital transformation goals.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
+              <a href="/contact" className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 hover:scale-105 shadow-lg">
                 Start Your Project
-              </button>
-              <button className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+              </a>
+              <a href="/contact" className="border border-white text-white hover:bg-white hover:text-primary-600 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
                 Schedule Consultation
-              </button>
+              </a>
             </div>
           </div>
         </div>

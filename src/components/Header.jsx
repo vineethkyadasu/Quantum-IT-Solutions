@@ -20,7 +20,7 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <Link to="/">
-              <Logo size={32} showText={true} showTagline={false} />
+              <Logo size={48} showText={true} showTagline={false} />
             </Link>
           </div>
 
