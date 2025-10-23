@@ -353,14 +353,34 @@ const Homepage = () => {
 
       {/* Stats Section */}
       <section 
-        className="py-20 text-white relative bg-gradient-to-r from-blue-600 to-green-500"
+        className="py-16 sm:py-20 md:py-24 text-white relative overflow-hidden"
+        style={{
+          backgroundImage: 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/design.png)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed'
+        }}
       >
+        {/* Subtle decorative elements */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          <div className="absolute -top-20 -left-20 w-72 h-72 rounded-full bg-white/5 blur-3xl"></div>
+          <div className="absolute -bottom-20 -right-20 w-96 h-96 rounded-full bg-white/5 blur-3xl"></div>
+        </div>
+        
         <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 md:gap-12">
             {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.number}</div>
-                <div className="text-blue-100 text-lg">{stat.label}</div>
+              <div key={index} className="text-center group">
+                <div className="relative inline-block mb-3 sm:mb-4">
+                  {/* Glow effect */}
+                  <div className="absolute inset-0 -m-3 sm:-m-4 bg-white/5 rounded-full blur-xl group-hover:bg-white/10 transition-all duration-300"></div>
+                  <div className="relative text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold drop-shadow-lg group-hover:scale-110 transition-transform duration-300">
+                    {stat.number}
+                  </div>
+                </div>
+                <div className="text-white/90 text-sm sm:text-base md:text-lg font-medium tracking-wide drop-shadow-md">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>

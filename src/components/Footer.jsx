@@ -34,7 +34,7 @@ const Footer = () => {
             </p> */}
             <div className="flex items-center justify-center sm:justify-start space-x-2 text-gray-400">
               <MapPinIcon className="w-4 h-4 flex-shrink-0" />
-              <span className="text-xs sm:text-sm">Casper, Wyoming, USA</span>
+              <span className="text-xs sm:text-sm">5830 E 2nd St, Suite 7000 #28995, Casper, Wyoming - 82609 USA</span>
             </div>
           </div>
 
@@ -76,13 +76,13 @@ const Footer = () => {
             <div className="space-y-2 sm:space-y-3">
               <div className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-3">
                 <EnvelopeIcon className="w-4 h-4 text-primary-400 flex-shrink-0" />
-                <a href="mailto:info@quantumitsolutions.com" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 text-xs sm:text-sm break-all">
-                  info@quantumitsolutions.com
+                <a href="mailto:Info@quantumitusa.com" className="text-gray-300 hover:text-primary-400 transition-colors duration-200 text-xs sm:text-sm break-all">
+                  Info@quantumitusa.com
                 </a>
               </div>
               <div className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-3">
                 <PhoneIcon className="w-4 h-4 text-primary-400 flex-shrink-0" />
-                <span className="text-gray-300 text-xs sm:text-sm">+1 (307) 247-0821</span>
+                <span className="text-gray-300 text-xs sm:text-sm">+1 (317) 457-6497</span>
               </div>
               <div className="flex items-center justify-center sm:justify-start space-x-2 sm:space-x-3">
                 <ClockIcon className="w-4 h-4 text-primary-400 flex-shrink-0" />
@@ -119,6 +119,21 @@ const Footer = () => {
               <Link to="/privacy" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">Privacy Policy</Link>
               <Link to="/terms" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">Terms of Service</Link>
               <Link to="/contact" className="text-gray-400 hover:text-primary-400 transition-colors duration-200">Contact</Link>
+            </div>
+          </div>
+          
+          {/* Developer Credit */}
+          <div className="mt-4 pt-4 border-t border-gray-800">
+            <div className="text-center text-gray-500 text-xs sm:text-sm">
+              Designed and Developed by{' '}
+              <a 
+                href="https://www.vikrin.com/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-primary-400 font-semibold hover:text-primary-300 transition-colors duration-200 hover:underline"
+              >
+                Vikrin
+              </a>
             </div>
           </div>
         </div>

@@ -30,23 +30,23 @@ const ContactPage = () => {
       icon: EnvelopeIcon,
       title: 'Email Us',
       description: 'We\'ll respond within 1 business day',
-      details: 'info@quantumitsolutions.com',
-      link: 'mailto:info@quantumitsolutions.com',
+      details: 'Info@quantumitusa.com',
+      link: 'mailto:Info@quantumitusa.com',
       color: 'text-blue-600'
     },
     {
       icon: PhoneIcon,
       title: 'Call Us',
       description: 'Mon–Fri · 9:00–18:00 (MT)',
-      details: '+1 (307) 123-4567',
-      link: 'tel:+13071234567',
+      details: '+1 (317) 457-6497',
+      link: 'tel:+13174576497',
       color: 'text-green-600'
     },
     {
       icon: MapPinIcon,
       title: 'Visit Us',
       description: 'Based in beautiful Wyoming',
-      details: 'Casper, Wyoming, USA',
+      details: '5830 E 2nd St, Suite 7000 #28995, Casper, Wyoming - 82609 USA',
       link: '#',
       color: 'text-purple-600'
     },
@@ -85,7 +85,7 @@ const ContactPage = () => {
       company: formData.company,
       service: formData.service,
       message: formData.message,
-      to_email: 'info@quantumitsolutions.com'
+      to_email: 'Info@quantumitusa.com'
     };
 
     try {
@@ -113,7 +113,7 @@ const ContactPage = () => {
       }, 5000);
     } catch (error) {
       console.error('Failed to send email:', error);
-      setError('Failed to send message. Please try again or contact us directly at info@quantumitsolutions.com');
+      setError('Failed to send message. Please try again or contact us directly at Info@quantumitusa.com');
     } finally {
       setIsSubmitting(false);
     }
@@ -215,7 +215,8 @@ const ContactPage = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900">Quantum IT Solutions LLC</h4>
-                    <p className="text-gray-600 mt-1">Casper, Wyoming, USA</p>
+                    <p className="text-gray-600 mt-1">5830 E 2nd St, Suite 7000 #28995</p>
+                    <p className="text-gray-600">Casper, Wyoming - 82609 USA</p>
                   </div>
                 </div>
 
@@ -438,12 +439,29 @@ const ContactPage = () => {
             </h2>
           </div>
           
-          <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPinIcon className="w-16 h-16 text-gray-400 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-gray-600">Casper, Wyoming, USA</h3>
-              <p className="text-gray-500 mt-2">Serving clients across the United States and globally</p>
+          {/* Google Maps Embed */}
+          <div className="rounded-2xl overflow-hidden shadow-2xl border border-gray-200">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2916.8!2d-106.313!3d42.8501!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDLCsDUxJzAwLjQiTiAxMDbCsDE4JzQ2LjgiVw!5e0!3m2!1sen!2sus!4v1234567890"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Quantum IT Solutions Location"
+            ></iframe>
+          </div>
+          
+          {/* Address Details Below Map */}
+          <div className="mt-8 text-center bg-gray-50 rounded-2xl p-8">
+            <div className="flex items-center justify-center mb-4">
+              <MapPinIcon className="w-8 h-8 text-primary-600 mr-3" />
+              <h3 className="text-2xl font-bold text-gray-900">Visit Our Office</h3>
             </div>
+            <p className="text-xl font-semibold text-gray-800">5830 E 2nd St, Suite 7000 #28995</p>
+            <p className="text-lg text-gray-600 mt-2">Casper, Wyoming - 82609 USA</p>
+            <p className="text-gray-500 mt-4">Serving clients across the United States and globally</p>
           </div>
         </div>
       </section>

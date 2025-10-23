@@ -34,10 +34,10 @@ const Header = () => {
   return (
     <header className="bg-white/95 backdrop-blur-md shadow-sm fixed w-full top-0 z-50">
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 md:h-20">
+        <div className="flex justify-between items-center h-20 md:h-24">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center">
-              <Logo size={75} mobileSize={45} showText={true} showTagline={false} />
+              <Logo size={90} mobileSize={55} showText={true} showTagline={false} />
             </Link>
           </div>
 
@@ -46,7 +46,7 @@ const Header = () => {
               <Link
                 key={item.name}
                 to={item.href}
-                className={`px-3 lg:px-4 py-2 rounded-lg text-sm lg:text-base font-medium transition-all duration-200 hover:-translate-y-0.5 ${
+                className={`px-4 lg:px-5 py-2.5 rounded-lg text-base lg:text-lg font-medium transition-all duration-200 hover:-translate-y-0.5 ${
                   location.pathname === item.href
                     ? 'text-primary-700 bg-primary-50 ring-1 ring-primary-100'
                     : 'text-gray-700 hover:text-primary-700 hover:bg-gray-50'
@@ -74,8 +74,8 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden absolute top-16 left-0 right-0 bg-white border-t border-gray-100 shadow-xl animate-slide-down">
-            <div className="px-4 pt-3 pb-4 space-y-2 max-h-[calc(100vh-4rem)] overflow-y-auto">
+          <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-t border-gray-100 shadow-xl animate-slide-down">
+            <div className="px-4 pt-3 pb-4 space-y-2 max-h-[calc(100vh-5rem)] overflow-y-auto">
               {navigation.map((item, index) => (
                 <Link
                   key={item.name}

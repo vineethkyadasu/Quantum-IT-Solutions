@@ -187,7 +187,7 @@ const AboutPage = () => {
                   Our <span className="text-primary-600">Mission</span> & Story
                 </h2>
                 <p className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed">
-                  Quantum IT Solutions LLC is a dynamic and forward-thinking technology consulting and services company based in Casper, Wyoming, USA. Founded with a vision to simplify complex IT challenges and empower digital transformation.
+                  Quantum IT Solutions LLC is a dynamic and forward-thinking technology consulting and services company based in Casper, Wyoming, USA (5830 E 2nd St, Suite 7000 #28995, Casper, Wyoming - 82609 USA). Founded with a vision to simplify complex IT challenges and empower digital transformation.
                 </p>
               </div>
               

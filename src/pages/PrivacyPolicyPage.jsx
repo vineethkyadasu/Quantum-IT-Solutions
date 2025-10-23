@@ -187,8 +187,8 @@ const PrivacyPolicyPage = () => {
                     <MapPinIcon className="w-5 h-5 text-primary-200 flex-shrink-0 mt-1" />
                     <div className="text-sm text-primary-50">
                       <div className="font-semibold text-white mb-1">Quantum IT Solutions LLC</div>
-                      <div>830 E 2nd St, Ste 7000 #28995</div>
-                      <div>Casper, WY 82609, United States</div>
+                      <div>5830 E 2nd St, Suite 7000 #28995</div>
+                      <div>Casper, Wyoming - 82609, United States</div>
                     </div>
                   </div>
                 </div>
@@ -209,10 +209,10 @@ const PrivacyPolicyPage = () => {
                   <div className="flex items-center space-x-3">
                     <PhoneIcon className="w-5 h-5 text-primary-200 flex-shrink-0" />
                     <a 
-                      href="tel:+13072470821" 
+                      href="tel:+13174576497" 
                       className="text-sm text-primary-50 hover:text-white transition-colors"
                     >
-                      +1 (307) 247-0821
+                      +1 (317) 457-6497
                     </a>
                   </div>
                 </div>

@@ -17,7 +17,7 @@ function App() {
       <div className="App min-h-screen flex flex-col">
         <ScrollToTop />
         <Header />
-        <div className="pt-16 md:pt-20 flex-grow">
+        <div className="pt-20 md:pt-24 flex-grow">
           <Routes>
             <Route path="/" element={<Homepage/>} />
             <Route path="/about" element={<AboutPage />} />
