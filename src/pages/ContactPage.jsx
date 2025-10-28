@@ -38,7 +38,7 @@ const ContactPage = () => {
       icon: PhoneIcon,
       title: 'Call Us',
       description: 'Mon–Fri · 9:00–18:00 (MT)',
-      details: '+1 (317) 457-6497',
+      details: '+1 (307) 247-0821',
       link: 'tel:+13174576497',
       color: 'text-green-600'
     },
