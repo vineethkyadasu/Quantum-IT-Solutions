@@ -5,7 +5,7 @@ const WhatsAppButton = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [message, setMessage] = useState('');
 
-  const phoneNumber = '13174576497'; // Your WhatsApp number
+  const phoneNumber = '13072470821'; // Your WhatsApp number
   const defaultMessage = 'Hello! I would like to know more about your IT solutions.';
 
   const handleWhatsAppClick = () => {
